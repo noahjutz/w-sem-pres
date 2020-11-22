@@ -4,8 +4,13 @@
 \begin{frame}
     \frametitle{Grundlagen}
     \framesubtitle{Interferenz}
-    \begin{figure}[ht]
-        \begin{subfigure}[b]{0.35\textwidth}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{alertblock}{Summenformel Interferenz}
+            $f_{ges}(x_0, t) = \sum_{i}f_i(x_0, t)$
+        \end{alertblock}
+        \column{0.5\textwidth}
+        \begin{figure}
             \begin{tikzpicture}
             \begin{axis}[
                 xmin=0,xmax=31.4,
@@ -14,7 +19,7 @@
                 axis line style=white,
                 scale only axis,
                 domain=0:31.4,
-                width=\textwidth,
+                height=0.2\textheight
             ]
                 \addplot[gray,dashed,thin]{2};
                 \addplot[samples=200,blue] {sin(deg(x))/2+2};
@@ -24,9 +29,8 @@
                 \addplot[samples=200,blue,very thick] {sin(deg(x))-2};
             \end{axis}
             \end{tikzpicture}
-        \end{subfigure}
-        \hspace{0.5cm}
-        \begin{subfigure}[b]{0.35\textwidth}
+        \end{figure}
+        \begin{figure}
             \begin{tikzpicture}
             \begin{axis}[
                 xmin=0,xmax=31.4,
@@ -35,7 +39,7 @@
                 axis line style=white,
                 scale only axis,
                 domain=0:31.4,
-                width=\textwidth,
+                height=0.2\textheight
             ]
                 \addplot[gray,dashed,thin]{2};
                 \addplot[samples=200,blue] {sin(deg(x+3.14))/2+2};
@@ -45,8 +49,8 @@
                 \addplot[samples=200,blue,very thick] {-2};
             \end{axis}
             \end{tikzpicture}
-        \end{subfigure}
-    \end{figure}
+        \end{figure}
+    \end{columns}
 \end{frame}
 
 \subsection{Doppelspaltexperiment}
