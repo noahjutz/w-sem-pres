@@ -99,6 +99,41 @@
     \end{columns}
 \end{frame}
 
+\subsection{Ergebnisse}
+\begin{frame}
+    \frametitle{Ergebnisse}
+    \begin{figure}[ht]
+        \begin{tikzpicture}
+            \begin{axis}[
+                xmin=0, xmax=150,
+                ymin=0, ymax=1023,
+                height=0.4\textheight,
+                width=\textwidth
+            ]
+            \end{axis}
+            \begin{scope}[x={290},y={100}]
+                \draw (0,0) .. controls (0.15,0.25) .. (0.3,0);
+                \draw (0.3,0) .. controls (0.45,0.75) .. (0.6,0);
+                \draw (0.6,0) .. controls (0.75,0.25) .. (0.9,0);
+            \end{scope}
+        \end{tikzpicture}
+        \caption{Erwartetes Signal}
+    \end{figure}
+    \begin{figure}[ht]
+        \begin{tikzpicture}
+            \begin{axis}[
+                xmin=0, xmax=150,
+                ymin=0, ymax=1023,
+                height=0.4\textheight,
+                width=\textwidth
+            ]
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Tatsächliches Signal}
+    \end{figure}
+
+\end{frame}
+
 \subsection{Arduino}
 \begin{frame}
     \frametitle{IR-Spektrometer}
