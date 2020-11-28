@@ -72,6 +72,34 @@
             \end{itemize}
             \item Sensor
         \end{itemize}
+
+        \column{0.5\textwidth}
+        \begin{figure}[ht]
+            \centering
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{assets/images/spektrometer-aufbau-frontal.jpg}};
+                \begin{scope}[x={(image.south east)},y={(image.north west)}]
+                    \draw (0.75,0.85) node[fill=white] {Spiegel};
+                    \draw (0.3,0.7) node[fill=white] {Lötkolben};
+                    \draw (0.8,0.55) node[fill=white] {Gitter};
+                    \draw (0.7,0.3) node[fill=white] {Sensor};
+                \end{scope}
+            \end{tikzpicture}
+        \end{figure}
+    \end{columns}
+\end{frame}
+
+\subsection{Versuch}
+\begin{frame}
+    \frametitle{IR-Spektrometer}
+    \framesubtitle{Versuch}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{enumerate}
+            \item Lötkolben gibt punktförmigen Strahl ab
+            \item Spiegel reflektiert zum Gitter
+            \item Wellen werden am Sensor dedektiert
+        \end{enumerate}
         \column{0.5\textwidth}
         \begin{figure}[ht]
             \begin{tikzpicture}
@@ -100,33 +128,6 @@
                 \fill[green] (-1,0.5) circle (0.1cm) node[black,anchor=east] {Sensor};
             \end{tikzpicture}
             \caption{Schematischer Versuchsaufbau}
-        \end{figure}
-    \end{columns}
-\end{frame}
-
-\subsection{Versuch}
-\begin{frame}
-    \frametitle{IR-Spektrometer}
-    \framesubtitle{Versuch}
-    \begin{columns}
-        \column{0.5\textwidth}
-        \begin{enumerate}
-            \item Lötkolben gibt punktförmigen Strahl ab
-            \item Spiegel reflektiert zum Gitter
-            \item Wellen werden am Sensor dedektiert
-        \end{enumerate}
-        \column{0.5\textwidth}
-        \begin{figure}[ht]
-            \centering
-            \begin{tikzpicture}
-                \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{assets/images/spektrometer-aufbau-frontal.jpg}};
-                \begin{scope}[x={(image.south east)},y={(image.north west)}]
-                    \draw (0.75,0.85) node[fill=white] {Spiegel};
-                    \draw (0.3,0.7) node[fill=white] {Lötkolben};
-                    \draw (0.8,0.55) node[fill=white] {Gitter};
-                    \draw (0.7,0.3) node[fill=white] {Sensor};
-                \end{scope}
-            \end{tikzpicture}
         \end{figure}
     \end{columns}
 \end{frame}
