@@ -3,17 +3,51 @@
 \begin{frame}
     \frametitle{IR-Spektrometer}
     \framesubtitle{Was ist es?}
-    \begin{columns}
-        \column{0.5\textwidth}
-        \begin{block}{Definition Infrarotspektrometer}
-            Analytisches Verfahren, mit dem Molekülstrukturen nachgewiesen werden können
-        \end{block}
-        \begin{itemize}
-            \item Wellenlängen im Infrarotbereich (\SI{3}{\micro\metre}-\SI{8}{\micro\metre})
-            \item Vibrationsmuster
-        \end{itemize}
-        \column{0.5\textwidth}
-    \end{columns}
+    \begin{block}{Definition Infrarotspektrometer}
+        Analytisches Verfahren, mit dem Molekülstrukturen nachgewiesen werden können
+    \end{block}
+    \begin{itemize}
+        \item Wellenlängen im Infrarotbereich (\SI{3}{\micro\metre}-\SI{8}{\micro\metre})
+        \item Vibrationsmuster
+    \end{itemize}
+
+    \begin{figure}[ht]
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+            \resizebox{\textwidth}{!} {
+                \chemfig{
+                    O(-[:135,0.8]H)(-[:45,0.8]H)
+                }
+                \hspace{0.1cm}
+                \chemfig{
+                    O(-[:135,1.2]H)(-[:45,1.2]H)
+                }
+            }
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+            \resizebox{\textwidth}{!} {
+                \chemfig{
+                    O(-[:135]H)(-[:45]H)
+                }
+                \hspace{0.1cm}
+                \chemfig{
+                    O(-[:160]H)(-[:20]H)
+                }
+            }
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+            \resizebox{\textwidth}{!} {
+                \chemfig{
+                    O(-[:135,1.2]H)(-[:45,0.8]H)
+                }
+                \hspace{0.1cm}
+                \chemfig{
+                    O(-[:135,0.8]H)(-[:45,1.2]H)
+                }
+            }
+        \end{subfigure}
+        \caption{Vibrationsmuster des $H_2O$-Moleküls}
+    \end{figure}
 \end{frame}
 
 \subsection{Komponenten}
