@@ -110,44 +110,35 @@
     \begin{columns}
         \column{0.5\textwidth}
         \column{0.5\textwidth}
-        \begin{figure}[ht]
-            \centering
-            % Reflektion
-            \begin{subfigure}[b]{0.3\textwidth}
-                \resizebox{\textwidth}{\textwidth}{%
-                \begin{tikzpicture}
-                    \draw[white] (0,0) grid (2,2);
+        % Reflektion
+        \begin{figure}
+            \begin{tikzpicture}
+                \draw[white] (0,0) grid (2,2);
 
-                    \draw[very thick,blue] (0.5,0.5) -- (1.5,1.5);
+                \draw[very thick,blue] (0.5,0.5) -- (1.5,1.5);
 
-                    \draw (1,2) -- (1,1); % Initial
-                    \draw[->] (1,1) -- (0,1); % Transmitted
-                \end{tikzpicture}
-                }
-            \end{subfigure}
-            % Beugung
-            \begin{subfigure}[b]{0.3\textwidth}
-                \resizebox{\textwidth}{\textwidth} {%
-                \begin{tikzpicture}
-                    \draw[white] (0,0) grid (2,2);
-                    \draw[very thick,blue,dashed] (0.5,1) -- (1.5,1); % Gitter
+                \draw (1,2) -- (1,1); % Initial
+                \draw[->] (1,1) -- (0,1); % Transmitted
+            \end{tikzpicture}
+        \end{figure}
+        % Beugung
+        \begin{figure}
+            \begin{tikzpicture}
+                \draw[white] (0,0) grid (2,2);
+                \draw[very thick,blue,dashed] (0.5,1) -- (1.5,1); % Gitter
 
-                    \draw (1,2) -- (1,1); % Initial
-                    \draw[->] (1,1) -- (0.3,0.3); % Transmitted
-                \end{tikzpicture}
-                }
-            \end{subfigure}
-            % Absorption
-            \begin{subfigure}[b]{0.3\textwidth}
-                \resizebox{\textwidth}{\textwidth}{%
-                \begin{tikzpicture}
-                    \draw[white] (0,0) grid (2,2);
-                    \draw[very thick,blue] (0.5,1) -- (1.5,1);
-                    \draw (1,2) -- (1,1);
-                    \draw[->,dashed] (1,1) -- (1,0);
-                \end{tikzpicture}
-                }
-            \end{subfigure}
+                \draw (1,2) -- (1,1); % Initial
+                \draw[->] (1,1) -- (0.3,0.3); % Transmitted
+            \end{tikzpicture}
+        \end{figure}
+        % Absorption
+        \begin{figure}
+            \begin{tikzpicture}
+                \draw[white] (0,0) grid (2,2);
+                \draw[very thick,blue] (0.5,1) -- (1.5,1);
+                \draw (1,2) -- (1,1);
+                \draw[->,dashed] (1,1) -- (1,0);
+            \end{tikzpicture}
         \end{figure}
     \end{columns}
 \end{frame}
