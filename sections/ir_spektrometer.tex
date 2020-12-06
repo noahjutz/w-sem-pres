@@ -101,11 +101,45 @@
     \frametitle{IR-Spektrometer}
     \framesubtitle{Komponenten}
     Optisches Gitter
-    \begin{itemize}
-        \item $b = \frac{k \lambda}{\sin \alpha} = \frac{k \lambda}{\sin \arctan \frac{l}{h}}$
-        \item $b_{100} = \frac{\SI{530}{\nano\metre}}{\sin \arctan \frac{\SI{5}{\centi\metre}}{\SI{100}{\centi\metre}}} \approx \SI{11}{\micro\metre}$
-        \item Gitter 100 Linien / mm
-    \end{itemize}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{itemize}
+            \item $b = \frac{k \lambda}{\sin \alpha} = \frac{k \lambda}{\sin \arctan \frac{l}{h}}$
+            \item $b_{100} = \frac{\SI{530}{\nano\metre}}{\sin \arctan \frac{\SI{5}{\centi\metre}}{\SI{100}{\centi\metre}}} \approx \SI{11}{\micro\metre}$
+            \item Gitter 100 Linien / mm
+        \end{itemize}
+        \column{0.5\textwidth}
+        \begin{figure}
+            \begin{tikzpicture}
+                \coordinate (max) at (6,6);
+                \coordinate (gittermitte) at (3,4);
+
+                % Interference pattern
+                \foreach \i in {1,2,...,20}
+                    \shade[black,white,shading angle={mod(\i,20)*180}] (6,{\i/4+1.25}) rectangle (6.2,{\i/4+1.5});
+
+                \draw (1,3.75) rectangle (2,4.25);
+                \draw (1.5,3.75) node[anchor=north] {Laser};
+
+                \draw[very thick,dashed] (3,3) -- (3,5);
+                \draw (3,3) node[anchor=north] {Gitter};
+            
+                % Sine wave
+                \draw[gray,very thin,wavy] (gittermitte) -- (max);
+                \draw[blue,ultra thick] (gittermitte) -- (max);
+                \draw[gray,very thin,wavy] (2,4) -- (3,4);
+                \draw[blue,ultra thick] (2,4) -- (3,4);
+
+                % Labels
+                \draw[gray,thick,dashed] (gittermitte) -- (6,4) -- (max) -- (gittermitte);
+                \draw (4.5,4) node[anchor=south] {$l$};
+                \draw (6,5) node[anchor=east] {$h$};
+                \draw (3.5,4) node[anchor=south west] {$\alpha$};
+                \draw (6.2,6) node[anchor=west] {$k$};
+            \end{tikzpicture}
+            \caption{Entstehung von Interferenz am Gitter}
+        \end{figure}
+    \end{columns}
 \end{frame}
 
 \subsection{Versuch}
