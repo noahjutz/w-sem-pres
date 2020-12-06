@@ -171,15 +171,19 @@
     \framesubtitle{Arduino}
 
 \begin{semiverbatim}
-const  int rpm = 60;
+rpm = 60
 
-const  int  stepsPerRev = 200;
+stepsPerRev = 200
 
-const  int  range = 150;
+range = 150
 
-const  int  rangePerRev = 20;
+rangePerRev = 20
 
-const  int  interval = 1
+interval = 1
+
+
+stepsPerInterval = (interval / rangePerRev) * stepsPerRev
+intervalAmount = range / interval
 \end{semiverbatim}
 \end{frame}
 
