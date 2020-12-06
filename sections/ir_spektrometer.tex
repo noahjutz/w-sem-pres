@@ -187,30 +187,20 @@ intervalAmount = range / interval
 \end{semiverbatim}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
     \frametitle{IR-Spektrometer}
     \framesubtitle{Arduino}
 
-\begin{semiverbatim}
-for (int i = 0; i < intervalAmount; i++) \{
-
-
+\begin{lstlisting}
+for (int i = 0; i < intervalAmount; i++) {
     stepper.step(stepsPerInterval)
-
-
     Serial.println(
-
-        String(i * interval) 
-
-        + ``   '' 
-
-        + String(analogRead(A0))
-        
+        String(i * interval) +
+        "    " +
+        String(analogRead(A0))
     )
-
-
-\}
-\end{semiverbatim}
+}
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}
