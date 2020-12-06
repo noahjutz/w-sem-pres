@@ -1,0 +1,13 @@
+\frametitle{IR-Spektrometer}
+    \framesubtitle{Arduino}
+
+\begin{lstlisting}
+for (int i = 0; i < intervalAmount; i++) {
+    stepper.step(stepsPerInterval)
+    Serial.println(
+        String(i * interval) +
+        "    " +
+        String(analogRead(A0))
+    )
+}
+\end{lstlisting}
