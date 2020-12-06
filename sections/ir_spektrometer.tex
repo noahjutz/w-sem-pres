@@ -166,25 +166,21 @@
 \end{frame}
 
 \subsection{Arduino}
-\begin{frame}
+\begin{frame}[fragile]
     \frametitle{IR-Spektrometer}
     \framesubtitle{Arduino}
 
-\begin{semiverbatim}
+\begin{lstlisting}
 rpm = 60
-
 stepsPerRev = 200
-
 range = 150
-
 rangePerRev = 20
-
 interval = 1
 
-
-stepsPerInterval = (interval / rangePerRev) * stepsPerRev
+stepsPerInterval =
+    (interval / rangePerRev) * stepsPerRev
 intervalAmount = range / interval
-\end{semiverbatim}
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]
