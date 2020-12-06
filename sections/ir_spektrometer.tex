@@ -239,6 +239,21 @@
 \begin{frame}
     \frametitle{IR-Spektrometer}
     \framesubtitle{Arduino}
+
+\begin{semiverbatim}
+for (int i = 0; i < intervalAmount; i++) \{
+
+    stepper.step(stepsPerInterval)
+
+    Serial.println(String(i * measurementInterval) + ``   '' + String(analogRead(A0)))
+
+\}
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}
+    \frametitle{IR-Spektrometer}
+    \framesubtitle{Arduino}
     \begin{figure}
         \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{assets/images/platformio.png}
     \end{figure}
